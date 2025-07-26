@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcelo Markus - Perfil</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/2b8ffb0c07.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #00ffe7;
+      --secondary: #0a0a0a;
+      --accent: #444;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: var(--secondary);
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      letter-spacing: 0.01em;
+    }
+    .container {
+      max-width: 800px;
+      margin: 48px auto;
+      padding: 32px;
+      background: rgba(20, 20, 20, 0.85);
+      border-radius: 18px;
+      box-shadow: 0 4px 32px 0 rgba(0,255,231,0.08), 0 1.5px 0 0 var(--primary);
+      border: 1px solid #232323;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px auto;
+      border: 3px solid var(--primary);
+      box-shadow: 0 0 0 4px #111, 0 4px 24px 0 var(--primary);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      margin-bottom: 28px;
+      color: #bfbfbf;
+    }
+    .socials {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .socials a {
+      display: inline-block;
+      margin: 0 13px;
+      color: var(--primary);
+      font-size: 2rem;
+      transition: color 0.2s;
+    }
+    .socials a:hover {
+      color: #fff;
+    }
+    section {
+      margin-bottom: 36px;
+    }
+    section:last-child {
+      margin-bottom: 0;
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    ul.talks {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.talks li {
+      background: rgba(0,255,231,0.10);
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      margin-bottom: 18px;
+      padding: 16px 20px 13px 20px;
+      box-shadow: 0 1.5px 0 0 #333;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    ul.talks li:last-child {
+      margin-bottom: 0;
+    }
+    .talk-icon {
+      font-size: 1.6rem;
+      margin-right: 4px;
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .talk-content {
+      flex: 1;
+    }
+    .talk-title {
+      font-weight: 600;
+      font-size: 1.08rem;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .talk-desc {
+      color: #bfbfbf;
+      font-size: 1rem;
+    }
+    .talk-link {
+      display: inline-block;
+      margin-top: 7px;
+      color: var(--primary);
+      font-size: 1.04rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .talk-link:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 12px;
+        margin: 20px 2px;
+      }
+      .avatar {
+        width: 88px;
+        height: 88px;
+      }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://avatars.githubusercontent.com/u/244818?v=4" alt="Marcelo Markus" class="avatar" />
+    <h1>Olá! Eu sou o Marcelo Markus <span title="Olá!">👋</span></h1>
+    <div class="subtitle">
+      Analista de Sistemas e Desenvolvedor na <a href="https://www.altoqi.com.br" target="_blank" style="color:var(--primary);text-decoration:none;font-weight:600;">AltoQI</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/marcelo-markus-27929374" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:marcelomarkus@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/marcelomarkus" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <!-- Adicione outros ícones se quiser -->
+    </div>
+    <section>
+      <h2><i class="fas fa-user"></i> Sobre mim</h2>
+      <p>
+        Sou Analista de Sistemas, Desenvolvedor na <a href="https://www.altoqi.com.br" target="_blank" style="color:var(--primary);">AltoQI</a> - <em>Solução Bim para Engenharia</em>.
+      </p>
+      <p>
+        Nos últimos anos, venho me especializando em Cloud Computing, com ênfase na plataforma AWS, além de atuar no desenvolvimento de APIs e microsserviços utilizando Python e FastAPI. Ao longo da minha carreira, trabalhei em projetos de alta performance, o que me motivou a desenvolver habilidades específicas para atender a essa demanda. Além disso, tive a oportunidade de atuar na criação e desenvolvimento de sistemas embarcados IOT.
+      </p>
+      <p>
+        Sou um entusiasta de tecnologia apaixonado por desenvolvimento de software, inovação e aprendizado contínuo.
+      </p>
+    </section>
+    <section>
+      <h2><i class="fas fa-bullhorn"></i> Palestras</h2>
+      <ul class="talks">
+        <li>
+          <span class="talk-icon"><i class="fas fa-microphone"></i></span>
+          <div class="talk-content">
+            <div class="talk-title">Campus Party 2023</div>
+            <div class="talk-desc">Como a arquitetura Serverless pode ajudar na redução de custos e no desenvolvimento ágil.</div>
+            <a class="talk-link" href="https://www.linkedin.com/posts/marcelo-markus-27929374_campus-party-2023-activity-7050498155527741440-oGi0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs" target="_blank">
+              <i class="fab fa-linkedin"></i> Ver no LinkedIn
+            </a>
+          </div>
+        </li>
+        <li>
+          <span class="talk-icon"><i class="fas fa-microchip"></i></span>
+          <div class="talk-content">
+            <div class="talk-title">TDC Summit IA 2024</div>
+            <div class="talk-desc">Como Criar um Servidor de IA com FastAPI</div>
+            <a class="talk-link" href="https://www.linkedin.com/posts/marcelo-markus-27929374_tdc-community-activity-7255748010515603457-HhrT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs" target="_blank">
+              <i class="fab fa-linkedin"></i> Ver no LinkedIn
+            </a>
+          </div>
+        </li>
+        <li>
+          <span class="talk-icon"><i class="fas fa-server"></i></span>
+          <div class="talk-content">
+            <div class="talk-title">Campus Party Brasil 2025</div>
+            <div class="talk-desc">Como criar seu servidor MCP</div>
+            <a class="talk-link" href="https://www.linkedin.com/posts/marcelo-markus-27929374_cpbr17-activity-7342976815138836481-AJ3J?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs" target="_blank">
+              <i class="fab fa-linkedin"></i> Ver no LinkedIn
+            </a>
+          </div>
+        </li>
+        <li>
+          <span class="talk-icon"><i class="fas fa-map-marker-alt"></i></span>
+          <div class="talk-content">
+            <div class="talk-title">Hacktown - Santa Rita do Sapucaí - MG</div>
+            <div class="talk-desc">Dia 31/07/25</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
