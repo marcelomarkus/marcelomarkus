@@ -30,5 +30,6 @@ Como Criar um Servidor de IA com FastAPI
 Como criar seu servidor MCP  
 [Ver no LinkedIn](https://www.linkedin.com/posts/marcelo-markus-27929374_cpbr17-activity-7342976815138836481-AJ3J?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs)
 
-**Hacktown - Santa Rita do Sapucaí - MG  
-Dia 31/07/25**
+**Hacktown - Santa Rita do Sapucaí - MG**  
+AWS MCP Servers: Da teoria à implementação  
+[Ver no LinkedIn](https://www.linkedin.com/posts/marcelo-markus-27929374_hacktown-inovaaexaeto-santaritadosapucaaed-activity-7357989292868042752-_6Wb)
