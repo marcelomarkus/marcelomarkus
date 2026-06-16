@@ -1,220 +1,335 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marcelo Markus - Perfil</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/2b8ffb0c07.js" crossorigin="anonymous"></script>
-  <style>
-    :root {
-      --primary: #00ffe7;
-      --secondary: #0a0a0a;
-      --accent: #444;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background: var(--secondary);
-      color: #fff;
-      font-family: 'Montserrat', Arial, sans-serif;
-      letter-spacing: 0.01em;
-    }
-    .container {
-      max-width: 800px;
-      margin: 48px auto;
-      padding: 32px;
-      background: rgba(20, 20, 20, 0.85);
-      border-radius: 18px;
-      box-shadow: 0 4px 32px 0 rgba(0,255,231,0.08), 0 1.5px 0 0 var(--primary);
-      border: 1px solid #232323;
-    }
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 20px auto;
-      border: 3px solid var(--primary);
-      box-shadow: 0 0 0 4px #111, 0 4px 24px 0 var(--primary);
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.6rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary);
-      font-weight: 700;
-    }
-    .subtitle {
-      text-align: center;
-      font-size: 1.15rem;
-      margin-bottom: 28px;
-      color: #bfbfbf;
-    }
-    .socials {
-      text-align: center;
-      margin-bottom: 36px;
-    }
-    .socials a {
-      display: inline-block;
-      margin: 0 13px;
-      color: var(--primary);
-      font-size: 2rem;
-      transition: color 0.2s;
-    }
-    .socials a:hover {
-      color: #fff;
-    }
-    section {
-      margin-bottom: 36px;
-    }
-    section:last-child {
-      margin-bottom: 0;
-    }
-    h2 {
-      color: var(--primary);
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-    }
-    ul.talks {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    ul.talks li {
-      background: rgba(0,255,231,0.10);
-      border-left: 4px solid var(--primary);
-      border-radius: 8px;
-      margin-bottom: 18px;
-      padding: 16px 20px 13px 20px;
-      box-shadow: 0 1.5px 0 0 #333;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-    ul.talks li:last-child {
-      margin-bottom: 0;
-    }
-    .talk-icon {
-      font-size: 1.6rem;
-      margin-right: 4px;
-      color: var(--primary);
-      flex-shrink: 0;
-      margin-top: 3px;
-    }
-    .talk-content {
-      flex: 1;
-    }
-    .talk-title {
-      font-weight: 600;
-      font-size: 1.08rem;
-      color: #fff;
-      margin-bottom: 2px;
-    }
-    .talk-desc {
-      color: #bfbfbf;
-      font-size: 1rem;
-    }
-    .talk-link {
-      display: inline-block;
-      margin-top: 7px;
-      color: var(--primary);
-      font-size: 1.04rem;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .talk-link:hover {
-      text-decoration: underline;
-      color: #fff;
-    }
-    @media (max-width: 600px) {
-      .container {
-        padding: 12px;
-        margin: 20px 2px;
+  <title>Marcelo Markus - Portfolio</title>
+  
+  <!-- SEO & Social Share -->
+  <meta name="description" content="Analista de Sistemas, Desenvolvedor Python/Rust e Especialista em Cloud AWS. Criador do protocolo B-Fast e Bru-gen.">
+  <meta property="og:title" content="Marcelo Markus - Portfolio">
+  <meta property="og:description" content="Cloud, IoT, Python/Rust e Protocolos de Alta Performance.">
+  <meta property="og:image" content="https://github.com/marcelomarkus.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00ffe7',
+            dark: '#0a0a0a',
+            darker: '#050505',
+            card: '#141414',
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+          },
+        }
       }
-      .avatar {
-        width: 88px;
-        height: 88px;
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .text-glow {
+        text-shadow: 0 0 10px rgba(0, 255, 231, 0.5);
       }
-      h1 { font-size: 2rem; }
+      .bg-blur {
+        backdrop-filter: blur(8px);
+      }
+    }
+    
+    .typed-cursor {
+      color: #00ffe7;
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <img src="https://avatars.githubusercontent.com/u/244818?v=4" alt="Marcelo Markus" class="avatar" />
-    <h1>Olá! Eu sou o Marcelo Markus <span title="Olá!">👋</span></h1>
-    <div class="subtitle">
-      Analista de Sistemas e Desenvolvedor na <a href="https://www.altoqi.com.br" target="_blank" style="color:var(--primary);text-decoration:none;font-weight:600;">AltoQI</a>
+<body class="bg-dark text-gray-100 font-montserrat">
+
+  <!-- --- HERO SECTION --- -->
+  <header id="home" class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-darker">
+    <!-- Animated Background Element -->
+    <div class="absolute inset-0 z-0 opacity-20">
+      <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary rounded-full filter blur-[120px] animate-pulse"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full filter blur-[150px] animate-pulse delay-700"></div>
     </div>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/marcelo-markus-27929374" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:marcelomarkus@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/marcelomarkus" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <!-- Adicione outros ícones se quiser -->
+
+    <div class="relative z-10 text-center px-4">
+      <h1 class="text-4xl md:text-7xl font-700 text-white mb-4">
+        <span class="text-primary text-glow">Marcelo Markus</span>
+      </h1>
+      <div class="text-xl md:text-3xl font-light text-gray-400 h-8">
+        <span id="typed"></span>
+      </div>
+      
+      <div class="mt-12 animate-bounce">
+        <a href="#about" class="text-primary text-3xl">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
     </div>
-    <section>
-      <h2><i class="fas fa-user"></i> Sobre mim</h2>
-      <p>
-        Sou Analista de Sistemas, Desenvolvedor na <a href="https://www.altoqi.com.br" target="_blank" style="color:var(--primary);">AltoQI</a> - <em>Solução Bim para Engenharia</em>.
-      </p>
-      <p>
-        Nos últimos anos, venho me especializando em Cloud Computing, com ênfase na plataforma AWS, além de atuar no desenvolvimento de APIs e microsserviços utilizando Python e FastAPI. Ao longo da minha carreira, trabalhei em projetos de alta performance, o que me motivou a desenvolver habilidades específicas para atender a essa demanda. Além disso, tive a oportunidade de atuar na criação e desenvolvimento de sistemas embarcados IOT.
-      </p>
-      <p>
-        Sou um entusiasta de tecnologia apaixonado por desenvolvimento de software, inovação e aprendizado contínuo.
-      </p>
-    </section>
-    <section>
-      <h2><i class="fas fa-bullhorn"></i> Palestras</h2>
-      <ul class="talks">
-        <li>
-          <span class="talk-icon"><i class="fas fa-microphone"></i></span>
-          <div class="talk-content">
-            <div class="talk-title">Campus Party 2023</div>
-            <div class="talk-desc">Como a arquitetura Serverless pode ajudar na redução de custos e no desenvolvimento ágil.</div>
-            <a class="talk-link" href="https://www.linkedin.com/posts/marcelo-markus-27929374_campus-party-2023-activity-7050498155527741440-oGi0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs" target="_blank">
-              <i class="fab fa-linkedin"></i> Ver no LinkedIn
+  </header>
+
+  <!-- --- ABOUT SECTION --- -->
+  <section id="about" class="py-20 bg-dark">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="bg-card rounded-2xl p-8 md:p-12 shadow-2xl border border-gray-800 flex flex-col md:flex-row gap-12">
+        
+        <!-- Left Column: Profile -->
+        <div class="md:w-1/3 flex flex-col items-center text-center">
+          <div class="relative mb-6">
+            <div class="absolute -inset-1 bg-primary rounded-full blur opacity-25"></div>
+            <img src="https://github.com/marcelomarkus.png" alt="Marcelo Markus" class="relative w-48 h-48 rounded-full border-4 border-primary shadow-2xl object-cover" />
+          </div>
+          <h2 class="text-2xl font-bold text-white mb-2">Marcelo Markus</h2>
+          <p class="text-primary font-semibold mb-6">Analista de Sistemas & Dev</p>
+          
+          <div class="flex gap-4 mb-8">
+            <a href="https://github.com/marcelomarkus" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-primary hover:bg-primary hover:text-dark transition-all">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/marcelo-markus-27929374" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-primary hover:bg-primary hover:text-dark transition-all">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:marcelomarkus@gmail.com" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-primary hover:bg-primary hover:text-dark transition-all">
+              <i class="fas fa-envelope"></i>
             </a>
           </div>
-        </li>
-        <li>
-          <span class="talk-icon"><i class="fas fa-microchip"></i></span>
-          <div class="talk-content">
-            <div class="talk-title">TDC Summit IA 2024</div>
-            <div class="talk-desc">Como Criar um Servidor de IA com FastAPI</div>
-            <a class="talk-link" href="https://www.linkedin.com/posts/marcelo-markus-27929374_tdc-community-activity-7255748010515603457-HhrT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs" target="_blank">
-              <i class="fab fa-linkedin"></i> Ver no LinkedIn
-            </a>
+
+          <!-- Skills Summary -->
+          <div class="w-full text-left">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4 text-center md:text-left">SKILLS</h3>
+            <div class="flex flex-wrap justify-center md:justify-start gap-2">
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">AWS / Cloud</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">Python / FastAPI</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">Rust</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">GO</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">C/C++</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">JS</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">PHP</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">MongoDB</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">MCP</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">IoT / Embedded</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">Serverless</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">High Performance</span>
+              <span class="px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs text-primary font-semibold">OpenAPI / Swagger</span>
+            </div>
           </div>
-        </li>
-        <li>
-          <span class="talk-icon"><i class="fas fa-server"></i></span>
-          <div class="talk-content">
-            <div class="talk-title">Campus Party Brasil 2025</div>
-            <div class="talk-desc">Como criar seu servidor MCP</div>
-            <a class="talk-link" href="https://www.linkedin.com/posts/marcelo-markus-27929374_cpbr17-activity-7342976815138836481-AJ3J?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs" target="_blank">
-              <i class="fab fa-linkedin"></i> Ver no LinkedIn
-            </a>
+        </div>
+
+        <!-- Right Column: Content -->
+        <div class="md:w-2/3">
+        <h3 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+          <span class="w-8 h-1 bg-primary rounded"></span> Sobre mim
+        </h3>
+        <div class="space-y-4 text-gray-300 leading-relaxed text-lg">
+          <p>
+            Sou Analista de Sistemas e Desenvolvedor na <a href="https://www.altoqi.com.br" target="_blank" class="text-primary hover:underline font-semibold">AltoQI</a>, atuando no setor de Soluções BIM para Engenharia.
+          </p>
+          <p>
+            Nos últimos anos, venho me especializando em <strong>Cloud Computing</strong>, com ênfase na plataforma <strong>AWS</strong>, além de atuar no desenvolvimento de APIs e microsserviços utilizando <strong>Python, FastAPI e Rust</strong>.
+          </p>
+          <p>
+            Ao longo da minha carreira, trabalhei em projetos de alta performance, o que me motivou a desenvolver habilidades específicas para atender a essa demanda. Além disso, tive a oportunidade de atuar na criação e desenvolvimento de sistemas embarcados <strong>IOT</strong>.
+          </p>
+
+          <div class="bg-primary/10 border-l-4 border-primary p-4 my-8 rounded-r-lg space-y-4 text-left">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-2">Projetos Open Source</h3>
+            <div>
+              <h4 class="text-white font-bold mb-1 flex items-center gap-2">
+                Criador do Protocolo ⚡B-Fast
+              </h4>
+                <p class="text-sm text-gray-400 mb-2">
+                  Protocolo binário de alta performance e extrema versatilidade, projetado para otimizar o tráfego de dados em cenários críticos: desde <strong>contextos de LLM (IA) e chats inteligentes</strong> até a comunicação ultra-rápida de <strong>APIs e sistemas IoT</strong>.
+                </p>
+                <a href="https://pypi.org/project/bfast-py/" target="_blank" class="text-xs text-primary hover:underline flex items-center gap-1">
+                  <i class="fas fa-external-link-alt"></i> Ver no PyPI
+                </a>
+              </div>
+              <div class="pt-2 border-t border-primary/20">
+                <h4 class="text-white font-bold mb-1 flex items-center gap-2">
+                  <i class="fab fa-python text-primary"></i> Criador da biblioteca Bru-gen
+                </h4>
+                <p class="text-sm text-gray-400 mb-2">
+                  CLI que transforma especificações <strong>OpenAPI (Swagger)</strong> em coleções prontas para o <strong>Bruno API Client</strong>.
+                </p>
+                <a href="https://pypi.org/project/bru-gen/" target="_blank" class="text-xs text-primary hover:underline flex items-center gap-1">
+                  <i class="fas fa-external-link-alt"></i> Ver no PyPI
+                </a>
+              </div>
+            </div>
+
+            <p>
+              Sou um entusiasta de tecnologia apaixonado por desenvolvimento de software, inovação e aprendizado contínuo.
+            </p>
           </div>
-        </li>
-        <li>
-          <span class="talk-icon"><i class="fas fa-map-marker-alt"></i></span>
-          <div class="talk-content">
-            <div class="talk-title">Hacktown - Santa Rita do Sapucaí - MG</div>
-            <div class="talk-desc">AWS MCP Servers: Da teoria à implementação</div>
-            <a class="talk-link" href="https://www.linkedin.com/posts/marcelo-markus-27929374_hacktown-inovaaexaeto-santaritadosapucaaed-activity-7357989292868042752-_6Wb" target="_blank">
-              <i class="fab fa-linkedin"></i> Ver no LinkedIn
-            </a>
+          
+          <div class="mt-10 flex flex-wrap gap-3">
+             <span class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-gray-300 font-medium">#AWS</span>
+             <span class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-gray-300 font-medium">#Python</span>
+             <span class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-gray-300 font-medium">#Rust</span>
+             <span class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-gray-300 font-medium">#Serverless</span>
+             <span class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-gray-300 font-medium">#IoT</span>
+             <span class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-gray-300 font-medium">#FastAPI</span>
+             <span class="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-gray-300 font-medium">#BFast</span>
           </div>
-        </li>
-      </ul>
-    </section>
-  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- TALKS SECTION --- -->
+  <section id="talks" class="py-20 bg-darker">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Minhas Palestras</h2>
+        <div class="w-24 h-1 bg-primary mx-auto"></div>
+        <p class="mt-4 text-gray-500 font-medium">Compartilhando conhecimento em grandes eventos de tecnologia.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Talk 0: FLISol 2026 -->
+        <div class="group bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 shadow-lg relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded border border-primary/20">2026</div>
+          <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fas fa-code"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">FLISol - DF</h3>
+          <p class="text-gray-400 mb-6">APIS de Elite - Boas Práticas e ferramentas OpenSource.</p>
+          <a href="https://www.linkedin.com/posts/marcelo-markus-27929374_flisol-flisoldf-softwarelivre-ugcPost-7453955774457737216-TgHK/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs" target="_blank" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+            Ver no LinkedIn <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Talk 1: Hacktown 2025 -->
+        <div class="group bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 shadow-lg relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded border border-primary/20">2025</div>
+          <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fas fa-robot"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">Hacktown - MG</h3>
+          <p class="text-gray-400 mb-6">AWS MCP Servers: Da teoria à implementação.</p>
+          <a href="https://www.linkedin.com/posts/marcelo-markus-27929374_hacktown-inovaaexaeto-santaritadosapucaaed-activity-7357989292868042752-_6Wb" target="_blank" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+            Ver no LinkedIn <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Talk 2: CPBR 2025 -->
+        <div class="group bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 shadow-lg relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded border border-primary/20">2025</div>
+          <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fas fa-server"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">Campus Party Brasil</h3>
+          <p class="text-gray-400 mb-6">Como criar seu servidor MCP.</p>
+          <a href="https://www.linkedin.com/posts/marcelo-markus-27929374_cpbr17-activity-7342976815138836481-AJ3J" target="_blank" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+            Ver no LinkedIn <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Talk 3: TDC 2024 -->
+        <div class="group bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 shadow-lg relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded border border-primary/20">2024</div>
+          <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fas fa-brain"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">TDC Summit IA</h3>
+          <p class="text-gray-400 mb-6">Como Criar um Servidor de IA com FastAPI.</p>
+          <a href="https://www.linkedin.com/posts/marcelo-markus-27929374_tdc-community-activity-7255748010515603457-HhrT" target="_blank" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+            Ver no LinkedIn <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Talk 4: Campus Party 2023 -->
+        <div class="group bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 shadow-lg relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded border border-primary/20">2023</div>
+          <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fas fa-cloud"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">Campus Party</h3>
+          <p class="text-gray-400 mb-6">Como a arquitetura Serverless pode ajudar na redução de custos e no desenvolvimento ágil.</p>
+          <a href="https://www.linkedin.com/posts/marcelo-markus-27929374_campus-party-2023-activity-7050498155527741440-oGi0" target="_blank" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+            Ver no LinkedIn <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Talk 5: INovaPol 2021 -->
+        <div class="group bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 shadow-lg relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded border border-primary/20">2021</div>
+          <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fas fa-hand-sparkles"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">INovaPol</h3>
+          <p class="text-gray-400 mb-6">Selecionado no Concurso de Inovação Policial - Dispositivo IOT de Reconhecimento via Palma da mão sem contato.</p>
+          <a href="https://www.linkedin.com/posts/marcelo-markus-27929374_tecnologia-inovaaexaeto-activity-6807429965022314496-cPLQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs" target="_blank" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+            Ver no LinkedIn <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Talk 6: Cloud Treinamentos 2021 -->
+        <div class="group bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 shadow-lg relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded border border-primary/20">2021</div>
+          <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">Semana da Computação em Nuvem</h3>
+          <p class="text-gray-400 mb-6">Cloud Treinamentos - Compartilhando experiências e aprendizados sobre a plataforma AWS.</p>
+          <a href="https://www.linkedin.com/posts/marcelo-markus-27929374_aws-aosmestres-mentores-activity-6697699876236525568-Tovl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA-0Br0BIxB0-4m-nrqI0d06rmFJD3wPOYs" target="_blank" class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all">
+            Ver no LinkedIn <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer class="py-12 bg-dark border-t border-gray-900 text-center">
+    <div class="container mx-auto px-4">
+      <p class="text-gray-500 mb-4">&copy; 2026 Marcelo Markus. Todos os direitos reservados.</p>
+      <div class="flex justify-center gap-6 text-gray-400">
+        <a href="https://github.com/marcelomarkus" target="_blank" class="hover:text-primary transition-colors"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/marcelo-markus-27929374" target="_blank" class="hover:text-primary transition-colors"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:marcelomarkus@gmail.com" class="hover:text-primary transition-colors"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#home" id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-dark rounded-full flex items-center justify-center shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 z-50">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script>
+    // Initialize Typed.js
+    var typed = new Typed('#typed', {
+      strings: [
+        'Analista de Sistemas',
+        'Apaixonado por Tecnologia',
+        'Desenvolvedor Python & FastAPI',
+        'Entusiasta de IoT',
+        'Palestrante'
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      smartBackspace: true,
+      loop: true
+    });
+
+    // Back to Top Logic
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.classList.remove('opacity-0', 'pointer-events-none');
+        backToTop.classList.add('opacity-100');
+      } else {
+        backToTop.classList.add('opacity-0', 'pointer-events-none');
+        backToTop.classList.remove('opacity-100');
+      }
+    });
+  </script>
 </body>
 </html>
