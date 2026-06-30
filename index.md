@@ -22,6 +22,14 @@ CLI que transforma especificações **OpenAPI (Swagger)** em coleções prontas 
 
 ## 📢 Palestras
 
+**AWS Student Community Day - UnB (2026)**  
+Mesa Redonda: Conectando a Base Acadêmica com os Desafios da TI  
+[Ver no LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7475875251604652033/)
+
+**Conecta CEIA - IA Brasil (2026)**  
+1º Prêmio AI Brasil Hero  
+[Ver no LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7475365135910440960/)
+
 **FLISol - DF (2026)**  
 APIS de Elite - Boas Práticas e ferramentas OpenSource  
 [Ver no LinkedIn](https://www.linkedin.com/posts/marcelo-markus-27929374_flisol-flisoldf-softwarelivre-ugcPost-7453955774457737216-TgHK/)
