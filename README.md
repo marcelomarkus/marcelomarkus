@@ -33,3 +33,7 @@ Como criar seu servidor MCP
 **Hacktown - Santa Rita do Sapucaí - MG**  
 AWS MCP Servers: Da teoria à implementação  
 [Ver no LinkedIn](https://www.linkedin.com/posts/marcelo-markus-27929374_hacktown-inovaaexaeto-santaritadosapucaaed-activity-7357989292868042752-_6Wb)
+
+**The Developer's Life Weekend - Umuarama/PR (2026):**  
+Workshop: Model Context Protocol (MCP) na Prática  
+[Ver no LinkedIn](https://www.linkedin.com/posts/marcelo-markus-27929374_mcp-modelcontextprotocol-llm-ugcPost-7496760080420368384-K21h/)
