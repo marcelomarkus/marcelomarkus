@@ -29,6 +29,10 @@ CLI que transforma especificações **OpenAPI (Swagger)** em coleções prontas 
 
 ## 📢 Palestras
 
+**The Developer's Life Weekend - Londrina/PR (2026)**  
+Workshop: Model Context Protocol (MCP) Hands-On  
+[Ver no LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7504344961199513600/)
+
 **The Developer's Life Weekend - Umuarama/PR (2026)**  
 Workshop: Model Context Protocol (MCP) na Prática  
 [Ver no LinkedIn](https://www.linkedin.com/posts/marcelo-markus-27929374_mcp-modelcontextprotocol-llm-ugcPost-7496760080420368384-K21h/)
