@@ -20,7 +20,11 @@ CLI que transforma especificações **OpenAPI (Swagger)** em coleções prontas 
 
 ---
 
-## 📢 Palestras
+## 📢 Palestras / Workshops
+
+**The Developer's Conference - TDC Community (2026)**  
+Workshop: Criando seu primeiro MCP Server  
+[Ver no LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7506145064692232192/)
 
 **The Developer's Life Weekend - Londrina/PR (2026)**  
 Workshop: Model Context Protocol (MCP) Hands-On  
